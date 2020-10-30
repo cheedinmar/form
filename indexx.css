@@ -1,0 +1,8 @@
+table{
+    text-align: center;
+}
+
+#show th, #show td{
+    text-align: center;
+    border: 2px solid black;
+}

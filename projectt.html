@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="bg-red">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="tailwind.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="indexx.css" />
+</head>
+<title>Javascript</title>
+
+<body class=" flex flex-col items-center">
+
+	<div class="flex flex-col w-4/5 border bg-gray-100 h-auto  m-10 p-10 rounded-lg shadow-lg">
+
+    	<div id="error"></div>
+    	<form id="form">
+        	<input type="text" id="state" name="state" placeholder="State..." class=" rounded border placeholder-gray-400 italic py-2 px-4 w-3/4 ">
+        	<input type="text" id="country" name="country" placeholder="Country..." class=" my-6 rounded border placeholder-gray-400 italic px-4 py-2 w-3/4">
+
+        	<div class="flex"><input type="text" id="date" name="date" placeholder="Date the state was created..." class=" rounded border placeholder-gray-400 italic py-2 w-3/4 px-4 mr-10">
+            	<button type="submit" id="submit" class="border bg-blue-400 rounded-lg px-12 font-black text-white " value="add">Submit</button>
+            	<!-- I removed onclick="AddRow()" since we have an addEventListener watching form submit
+            	and performing validations before triggering the row insert -->
+        	</div>
+    	</form>
+	</div>
+
+	<div class="border  shadow-xl w-4/5 h-auto flex flex-col items-center py-10 ">
+
+    	<div class=" w-4/5 flex flex-col items-end justify-items-start "><input onkeyup="searchTable()" id="myInput" name="search" type="text" placeholder="Search..." class="rounded-lg border placeholder-gray-400 italic w-56 px-4 my-3 py-1"></div>
+    	<table class=" border mx-8 w-4/5 center" id="show">
+        	<thead>
+            	<tr class="bg-gray-100">
+                	<th class=" py-2 border text-md  text-gray-700">State</th>
+                	<th class=" py-2 border text-md text-gray-700">Country</th>
+                	<th class="py-2 border text-md text-gray-700">Date the state was created</th>
+            	</tr>
+        	</thead>
+    	</table>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
